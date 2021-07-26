@@ -22,25 +22,51 @@ document.getElementById('phone-decrease').addEventListener('click', function () 
 
 
 
-
 // Case-increase even handler
 document.getElementById('case-increase').addEventListener('click', function () {
-    const CaseInput = document.getElementById('case-count').value;
-    const CaseCount = parseInt(CaseInput);
-    const newCaseCount = CaseCount + 1;
-    document.getElementById('case-count').value = newCaseCount;
-
-    const CaseTotall = newCaseCount * 59; //per unit price
-    document.getElementById('case-totall').innerText = CaseTotall;
+    handleProductChange(true);
 });
 
-// phone-decrease even handler
+// Case-decrease even handler
 document.getElementById('case-decrease').addEventListener('click', function () {
+    handleProductChange(false);
+});
+
+function handleProductChange(isIncrease) {
     const CaseInput = document.getElementById('case-count').value;
     const CaseCount = parseInt(CaseInput);
-    const newCaseCount = CaseCount - 1;
+    // const newCaseCount = CaseCount - 1; // const newCaseCount = CaseCount + 1;
+    let newCaseCount = CaseCount;
+    if (isIncrease == true) {
+        newCaseCount = CaseCount + 1;
+    }
+    if (isIncrease == false && CaseCount > 0) {
+        newCaseCount = CaseCount - 1;
+    }
     document.getElementById('case-count').value = newCaseCount;
 
     const CaseTotall = newCaseCount * 59; //per unit price
     document.getElementById('case-totall').innerText = CaseTotall;
-});
+}
+
+// // Case-increase even handler
+// document.getElementById('case-increase').addEventListener('click', function () {
+//     const CaseInput = document.getElementById('case-count').value;
+//     const CaseCount = parseInt(CaseInput);
+//     const newCaseCount = CaseCount + 1;
+//     document.getElementById('case-count').value = newCaseCount;
+
+//     const CaseTotall = newCaseCount * 59; //per unit price
+//     document.getElementById('case-totall').innerText = CaseTotall;
+// });
+
+// // Case-decrease even handler
+// document.getElementById('case-decrease').addEventListener('click', function () {
+//     const CaseInput = document.getElementById('case-count').value;
+//     const CaseCount = parseInt(CaseInput);
+//     const newCaseCount = CaseCount - 1;
+//     document.getElementById('case-count').value = newCaseCount;
+
+//     const CaseTotall = newCaseCount * 59; //per unit price
+//     document.getElementById('case-totall').innerText = CaseTotall;
+// });
