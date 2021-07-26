@@ -1,14 +1,14 @@
 /*---------------- Phone Even Handler start ----------------*/ 
 
-// phone-increase even handler
-document.getElementById('phone-increase').addEventListener('click', function () {
-    handlePhoneChange(true);
-});
+// // phone-increase even handler
+// document.getElementById('phone-increase').addEventListener('click', function () {
+//     handlePhoneChange(true);
+// });
 
-// phone-decrease even handler
-document.getElementById('phone-decrease').addEventListener('click', function () {
-    handlePhoneChange(false);
-});
+// // phone-decrease even handler
+// document.getElementById('phone-decrease').addEventListener('click', function () {
+//     handlePhoneChange(false);
+// });
 
 function handlePhoneChange(isIncrease) {
     const PhoneInput = document.getElementById('phone-count').value;
@@ -53,15 +53,15 @@ function handlePhoneChange(isIncrease) {
 
 /*---------------- Case Even Handler start ----------------*/ 
 
-// Case-increase even handler
-document.getElementById('case-increase').addEventListener('click', function () {
-    handleCaseChange(true);
-});
+// // Case-increase even handler
+// document.getElementById('case-increase').addEventListener('click', function () {
+//     handleCaseChange(true);
+// });
 
-// Case-decrease even handler
-document.getElementById('case-decrease').addEventListener('click', function () {
-    handleCaseChange(false);
-});
+// // Case-decrease even handler
+// document.getElementById('case-decrease').addEventListener('click', function () {
+//     handleCaseChange(false);
+// });
 
 function handleCaseChange(isIncrease) {
     const CaseInput = document.getElementById('case-count').value;
