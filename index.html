@@ -25,17 +25,11 @@
 
                      <div class="col-md-5 center-item">
                         <div class="input-group number-spinner">
-                           <button onclick="handleProductChange(false)" class="btn btn-default">
-                              <i class="fas fa-minus"></i>
-                           </button>
-
-                           <input id="count" type="text" class="form-control text-center" value="1">
-
-                           <button onclick="handleProductChange(true)" class="btn btn-default">
-                              <i class="fas fa-plus"></i>
-                           </button>
+                           <button class="btn btn-default"><i class="fas fa-minus"></i></button>
+                           <input type="text" class="form-control text-center" value="1">
+                           <button class="btn btn-default"><i class="fas fa-plus"></i></button>
                         </div>
-                        <h5>$ <span id="amount">10</span></h5>
+                        <h5>$1219</h5>
                         <img src="images/remove.png" alt="" class="remove-item">
                      </div>
                   </div>
@@ -84,20 +78,5 @@
       </div>
    </section>
 </body>
-<script>
-   function handleProductChange(isIncrease) {
-      const caseInput = document.getElementById('case-count');
-      const caseCount = parseInt(caseInput.value);
-      if (isIncrease == true) {
-         totallCount = countNumber + 1;
-      }
-      if (isIncrease == false && totallCount > 0) {
-         totallCount = countNumber - 1;
-      }
-      document.getElementById('count').value = totallCount;
-      const toalllPrice = totallCount * 10;
-      const amount = document.getElementById("amount").innerText = toalllPrice;
-   }
-</script>
 
 </html>
